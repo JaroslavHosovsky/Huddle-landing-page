@@ -1,0 +1,129 @@
+/* === COLORS === */
+/* === fonts === */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 31px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: #674bb0;
+  background-position: top;
+}
+
+header {
+  padding: 0px 38px 31px 38px;
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+}
+header img:first-of-type {
+  width: 128px;
+  padding-bottom: 62px;
+}
+header img:last-child {
+  width: 300px;
+}
+
+main {
+  padding: 31px 38px 0 38px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  max-width: 375px;
+}
+main h1 {
+  font-family: "Poppins", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+main p {
+  color: hsl(0, 0%, 100%);
+  line-height: 23px;
+  margin-bottom: 25px;
+}
+main button[type=submit] {
+  background-color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 11px 75px;
+  border-radius: 25px;
+  color: #674bb0;
+  font-weight: 500;
+  margin-bottom: 63px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.208);
+  transition: all 0.3s;
+}
+main button[type=submit]:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: hsl(0, 0%, 100%);
+}
+main .icon-wrapper img {
+  width: 28px;
+  padding: 5px;
+  margin-right: 6px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+main .icon-wrapper img:hover {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(20%) saturate(3931%) hue-rotate(240deg) brightness(95%) contrast(90%);
+  border: 1px solid hsl(300, 69%, 71%);
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-image: url("images/bg-desktop.svg");
+    background-position: center;
+    background-size: cover;
+    flex-direction: row;
+    padding: 0;
+    width: 90%;
+    margin: auto;
+    gap: 25px;
+  }
+  header {
+    max-width: 720px;
+    padding: 0;
+  }
+  header img:first-of-type {
+    width: 203px;
+    padding-bottom: 62px;
+  }
+  header img:last-child {
+    width: 660px;
+  }
+  main {
+    max-width: 720px;
+    padding: 173px 38px 0 38px;
+    text-align: left;
+    align-items: flex-start;
+  }
+  main h1 {
+    font-size: 40px;
+  }
+  main p {
+    font-size: 18px;
+  }
+  main button[type=submit] {
+    padding: 15px 60px;
+  }
+  main .icon-wrapper {
+    align-self: flex-end;
+    padding-top: 55px;
+  }
+  main .icon-wrapper img {
+    width: 35px;
+  }
+}/*# sourceMappingURL=style.css.map */

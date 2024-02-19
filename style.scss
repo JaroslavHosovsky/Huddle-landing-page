@@ -1,0 +1,135 @@
+@import "partials/mixins";
+@import "partials/variables";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+// font-family: "Poppins", sans-serif;
+// font-family: "Open Sans", sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font_body;
+}
+
+body {
+  min-height: 100vh;
+  padding: 31px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: $primary_background_color;
+  background-position: top;
+}
+
+header {
+  padding: 0px 38px 31px 38px;
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+
+  img:first-of-type {
+    width: 128px;
+    padding-bottom: 62px;
+  }
+
+  img:last-child {
+    width: 300px;
+  }
+}
+
+main {
+  padding: 31px 38px 0 38px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  max-width: 375px;
+
+  h1 {
+    font-family: $font_headings;
+    color: $primary_white;
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  p {
+    color: $primary_white;
+    line-height: 23px;
+    margin-bottom: 25px;
+  }
+
+  button[type="submit"] {
+    @include registerButton;
+
+    &:hover {
+      background-color: $primary_soft_magenta;
+      color: $primary_white;
+    }
+  }
+
+  .icon-wrapper {
+    img {
+      @include iconStyle;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-image: url("images/bg-desktop.svg");
+    background-position: center;
+    background-size: cover;
+    flex-direction: row;
+    padding: 0;
+    width: 90%;
+    margin: auto;
+    gap: 25px;
+  }
+
+  header {
+    max-width: 720px;
+    padding: 0;
+
+    img:first-of-type {
+      width: 203px;
+      padding-bottom: 62px;
+    }
+
+    img:last-child {
+      width: 660px;
+    }
+  }
+
+  main {
+    max-width: 720px;
+    padding: 173px 38px 0 38px;
+    text-align: left;
+    align-items: flex-start;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    button[type="submit"] {
+      padding: 15px 60px;
+    }
+
+    .icon-wrapper {
+      align-self: flex-end;
+      padding-top: 55px;
+
+      img {
+        width: 35px;
+      }
+    }
+  }
+}
